@@ -1,11 +1,17 @@
  <script setup>
  import {FormKit} from '@formkit/vue'
+ import {useRouter} from 'vue-router'
+ import axios from 'axios'
  import RouterLink from '@/components/UI/RouterLink.vue';
  import heading from '@/components/UI/heading.vue';
 
- 
+ const router = useRouter()
  const validacion=(data)=>{
-    console.log(data);
+    axios.post("http://localhost:4000/clientes", data)
+    .then(() => {
+        router.push({name:'inicio'})
+ 
+    })
  }
 </script>
 <template>

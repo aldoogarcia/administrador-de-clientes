@@ -1,0 +1,31 @@
+{
+  "clientes": [
+    {
+      "id": "ef08",
+      "nombre": "Mariana",
+      "apellido": "Romero Viveros",
+      "email": "Mariana.viveros@amor.mx",
+      "telefono": "557-431-9972",
+      "empresa": "ICEL",
+      "puesto": "Docente"
+    },
+    {
+      "id": "e173",
+      "nombre": "Mariana",
+      "apellido": "Romero Viveros",
+      "email": "Mariana.viveros@amor.mx",
+      "telefono": "557-431-9972",
+      "empresa": "ICEL",
+      "puesto": "Docente"
+    },
+    {
+      "id": "240c",
+      "nombre": "aldo",
+      "apellido": "Garcia",
+      "email": "aldoredcreo@gmail.com",
+      "telefono": "557-431-9972",
+      "empresa": "Ademsa",
+      "puesto": "Sistemas"
+    }
+  ]
+}
