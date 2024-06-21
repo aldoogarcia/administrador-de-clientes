@@ -1,17 +1,23 @@
  <script setup>
  import {FormKit} from '@formkit/vue'
  import {useRouter} from 'vue-router'
- import axios from 'axios'
+ import ClienteService from '@/services/ClienteService';
  import RouterLink from '@/components/UI/RouterLink.vue';
  import heading from '@/components/UI/heading.vue';
 
  const router = useRouter()
+
  const validacion=(data)=>{
-    axios.post("http://localhost:4000/clientes", data)
-    .then(() => {
-        router.push({name:'inicio'})
+     data.estado=1;
+    ClienteService.agregarcliente(data)
+    // .then((response) => {
+    //     console.log(response);
+    //     router.push({name:'inicio'})
  
-    })
+    // }).catch((e)=>{
+    //     console.log(e)
+    // })
+    router.push({name:'inicio'})
  }
 </script>
 <template>
@@ -72,8 +78,8 @@
             label="Telefono"
             name="telefono"
             placeholder="Telefono XXX-XXX-XXXX"
-            validation="?matches:/^[0-9]{3}-[0-9]{3}-[0-9]{4}"
-            :validation-messages="{matches:'El formato es no es valido'}"
+            
+            
              
             
         />
